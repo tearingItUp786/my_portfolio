@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,300,500,700")
+$black: #0d0d0d
+$yellow: #f5ae00
+$gray: #a0a0a0
+$white: #ffffff
+$lighter-white: #cccccc
+$font-stack: 'Raleway', sans-serif
+$bold: 700
+$light: 300
+$regular: 400
+$medium: 500
+
+@mixin bp-large
+  @media only screen and (max-width: 60em)
+    @content
+
+
+
+@mixin bp-medium
+  @media only screen and (max-width: 50em)
+    @content
+
+
+
+@mixin bp-small
+  @media only screen and (max-width: 30em)
+    @content

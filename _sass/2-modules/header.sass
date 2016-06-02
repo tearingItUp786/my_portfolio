@@ -1,0 +1,34 @@
+.header
+  +size(100% 100%)
+  position: relative
+  overflow: hidden
+  background:
+    image: linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),url(/images/backgrounds/shutterstock_281792450-1920x1080.jpg)
+    repeat: no-repeat
+    position: center
+    size: cover
+    attachment: fixed
+
+  .name-holder
+    position: absolute
+    top: 50%
+    left: 5%
+    color: $white
+
+    .name
+      margin: 0
+      font-size: +em(45)
+      font-weight: $regular
+
+      .yellow-bold
+        color: $yellow
+        font-weight: $bold
+
+    .title
+      color: $lighter-white
+      margin: 0
+      font-weight: $light
+      font-size: +em(30)
+
+      .yellow
+        color: $yellow

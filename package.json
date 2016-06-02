@@ -1,0 +1,32 @@
+{
+  "name": "my_portfolio",
+  "version": "1.0.0",
+  "description": "Taranveer Bains. A BBA candidate who loves to code and design. ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tearingItUp786/my_portfolio.git"
+  },
+  "keywords": [
+    "Portfolio"
+  ],
+  "author": "Taranveer Bains",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tearingItUp786/my_portfolio/issues"
+  },
+  "homepage": "https://github.com/tearingItUp786/my_portfolio#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-contrib-cssmin": "^1.0.1",
+    "grunt-contrib-uglify": "^1.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-jekyll": "^0.4.4",
+    "grunt-responsive-images": "^0.1.7",
+    "grunt-sass": "^1.2.0"
+  }
+}
