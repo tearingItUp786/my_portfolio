@@ -3,7 +3,12 @@ $(document).ready(function() {
         var windowScroll = $(this).scrollTop();
 
         $('.name-holder').css({
-            'transform': 'translate(0px, ' + windowScroll/2 + '%)'
+            'transform': 'translate(-' + windowScroll * 2 + 'px, 0)'
         });
-    })
+
+        $('.mike').css({
+            'transform': 'translate(-' + windowScroll * 2 + 'px, 0)'
+        });
+
+    });
 });
