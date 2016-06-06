@@ -1,9 +1,10 @@
 .navbar
   position: fixed
-  +size(100% 100px)
+  +size(100% 50px)
   z-index: 1
   background:
     color: none
+  transition: all 0.5s ease
 
   .nav
     +display(flex)
@@ -21,13 +22,105 @@
       text-align: center
       font-size: +em(20)
       font-weight: $regular
+
       a
         text-decoration: none
         color: $white
+        padding: 23px
+
+        &:hover
+          color: $yellow
 
       .inner-logo
         display: block
         margin: 0 auto
         width: 100%
         height: 100%
-        max-width: 200px
+        max-width: 120px
+
+        &.svg-light
+          path
+            fill: $lighter-white
+
+        &.svg-yellow
+          path
+            fill: $yellow
+
+
+  &.active
+    background:
+      color: $black
+    padding: 10px 0 10px 0
+
+    .nav-item
+      a
+        color: $lighter-white
+
+        &:hover
+          color: $yellow
+          background:
+            color: black
+
+        &.active
+          color: $yellow
+
+.c-hamburger
+  display: none
+
+@include bp-medium
+  .navbar
+    opacity: 0
+    height: auto
+    width: 50%
+    transform: translate(-100%, 0)
+
+
+    &.open
+      opacity: 1
+      transform: translate(0, 0)
+      margin: 0
+      padding: 0
+      background:
+        color: $black
+
+    .nav
+      +display(flex)
+      +flex-direction(column)
+      +flex-wrap(wrap)
+      +size(100% 100%)
+      +align-items(center)
+      margin: 0
+      padding: 0
+      list-style-type: none
+
+      .nav-item
+        width: 100%
+        padding: 10% 0 10% 0
+        border-top: 1px solid darken($gray, 20%)
+
+        &.active
+          border-left: 3px solid $yellow
+          background:
+            color: black
+
+        &:last-of-type
+          border-bottom: 1px solid $gray
+
+        &:nth-of-type(3)
+          display: none
+
+        &:hover
+          border-left: 3px solid $yellow
+          background:
+            color: black
+        a
+          padding: 25px 50px 25px 50px
+
+
+  .c-hamburger
+    position: fixed
+    top: 0
+    right: 0
+    border: solid 1px $black
+    z-index: 2
+    display: block

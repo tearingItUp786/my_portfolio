@@ -19,7 +19,7 @@ module.exports = function(grunt) {
 
         watch: {
             sass: {
-                files: '_sass/**/*.sass',
+                files: ['_sass/**/*.sass', '_sass/**/*.scss'],
                 tasks: ['sass']
             },
             jekyll: {
@@ -53,16 +53,20 @@ module.exports = function(grunt) {
                     newFilesOnly: false,
                     sizes: [{
                         namge: "large",
-                        width: '1920px',
-                        height: '1080px',
+                        width: '300px',
+                        height: '300px',
                         aspectRatio: false
                     }],
-                    quality: 80
+                    quality: 100
                 },
                 files: [{
+                    // expand: true,
+                    // src: ['**.{JPG,gif,png,jpg}'],
+                    // cwd: 'images/originals/',
+                    // dest: 'images/backgrounds/'
                     expand: true,
-                    src: ['**.{JPG,gif,png,jpg}'],
-                    cwd: 'images/originals/',
+                    src: ['business-1-try.jpg'],
+                    cwd: 'images/backgrounds/',
                     dest: 'images/backgrounds/'
                 }]
             }
