@@ -14,7 +14,8 @@
     top: 40%
     left: 5%
     color: $white
-
+    @include bp-medium
+      transition: all 0.5s ease
     .name
       @extend .section-title
 
@@ -32,6 +33,8 @@
     top: 70%
     left: 5%
     color: $gray
+    @include bp-medium
+      transition: all 0.5s ease
 
     .saying
       font-weight: $light

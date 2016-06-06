@@ -16,10 +16,16 @@ $(function() {
         if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
             var target = $(this.hash);
             target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+
+            if ($('.c-hamburger').hasClass('is-active')) {
+                $('.c-hamburger').removeClass('is-active');
+                $('.navbar').removeClass('open');
+            }
+
             if (target.length) {
                 $('html, body').animate({
                     scrollTop: target.offset().top
-                }, 1000);
+                }, 500);
 
                 return false;
             }
@@ -36,20 +42,30 @@ function removeActiveClass() {
 }
 
 $(document).ready(function() {
+    var initHeight = $(window).height() + 56;
 
     $('#home').css({
-        'height': $(window).height() + 50
+        'height': initHeight
     });
 
-    var oldHeight = $(window).height();
     $(window).resize(function() {
         var currentHeight = $(window).height();
 
-        if (oldHeight != currentHeight) {
+        var heightDifferece = currentHeight - initHeight;
+        console.log(heightDifferece);
+
+        if (heightDifferece > 56) {
+            console.log("Current Height was greater by init height more than navbar")
             $('#home').css({
-                'height': $(window).height() + 50
+                'height': currentHeight + 56
             });
-            oldHeight = currentHeight;
+            initHeight = currentHeight;
+        } else if (heightDifferece < -56) {
+            console.log("Current Height was less by init height more than navbar")
+            $('#home').css({
+                'height': currentHeight + 56
+            });
+            initHeight = currentHeight;
         }
     });
 
@@ -59,15 +75,17 @@ $(document).ready(function() {
         var windowWidth = $(this).width();
         var windowScroll = $(this).scrollTop();
 
-        if (windowScroll < windowWidth) {
-            $('.name-holder').css({
-                'transform': 'translate(-' + windowScroll + 'px, 0)'
-            });
+        window.requestAnimationFrame(function() {
+            if (windowScroll < windowWidth) {
+                $('.name-holder').css({
+                    'transform': 'translate(-' + windowScroll*2 + 'px, 0)'
+                });
 
-            $('.mike').css({
-                'transform': 'translate(' + windowScroll + 'px, 0)'
-            });
-        }
+                $('.mike').css({
+                    'transform': 'translate(' + windowScroll*2 + 'px, 0)'
+                });
+            }
+        });
 
         if (windowScroll > windowHeight - 50) {
             $('.navbar').addClass('active');
@@ -93,4 +111,38 @@ $(document).ready(function() {
         }
 
     });
+
 });
+
+var projects = [{
+    'id': 'project1',
+    'attributes': {
+        'name': 'First project',
+        'date': 'May 2016'
+    }
+}, {
+    'id': 'project2',
+    'attributes': {
+        'name': 'Second project',
+        'date': 'May 2016'
+    }
+}];
+
+function openDialog(param) {
+
+    for (var key in projects) {
+        if (projects.hasOwnProperty(key)) {
+            if (projects[key].id === param.id) {
+                console.log("We have a match");
+                console.log(projects[key].attributes);
+                vex.dialog.confirm({
+                    message: 'Are you absolutely sure you want to destroy the alien planet?',
+                    callback: function(value) {
+                        return console.log(value ? 'Successfully destroyed the planet.' : 'Chicken.');
+                    }
+                });
+
+            }
+        }
+    }
+}

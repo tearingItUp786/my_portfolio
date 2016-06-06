@@ -115,7 +115,7 @@
           background:
             color: black
         a
-          padding: 25px 50px 25px 50px
+          padding: 20px 50px 20px 50px
 
 
   .c-hamburger
@@ -128,8 +128,17 @@
 
 @include bp-small
   .c-hamburger
-    width: 80px
+    width: 90px
     height: 80px
 
     span
-      top: 40px
+      top: 39px
+
+  .navbar
+    overflow-y: auto
+    overflow-x: hidden
+    max-height: 300px
+    .nav
+      .nav-item
+        a
+          padding: 20px

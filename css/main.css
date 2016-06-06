@@ -864,7 +864,7 @@ html, body {
           border-left: 3px solid #f5ae00;
           background-color: black; }
         .navbar .nav .nav-item a {
-          padding: 25px 50px 25px 50px; }
+          padding: 20px 50px 20px 50px; }
   .c-hamburger {
     position: fixed;
     top: 0;
@@ -875,10 +875,16 @@ html, body {
 
 @media only screen and (max-width: 30em) {
   .c-hamburger {
-    width: 80px;
+    width: 90px;
     height: 80px; }
     .c-hamburger span {
-      top: 40px; } }
+      top: 39px; }
+  .navbar {
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 300px; }
+    .navbar .nav .nav-item a {
+      padding: 20px; } }
 
 .header {
   height: 100%;
@@ -895,6 +901,9 @@ html, body {
     top: 40%;
     left: 5%;
     color: #fff; }
+    @media only screen and (max-width: 50em) {
+      .header .name-holder {
+        transition: all 0.5s ease; } }
     .header .name-holder .title {
       color: #ccc;
       margin: 0;
@@ -911,6 +920,9 @@ html, body {
     top: 70%;
     left: 5%;
     color: #a0a0a0; }
+    @media only screen and (max-width: 50em) {
+      .header .mike {
+        transition: all 0.5s ease; } }
     .header .mike .saying {
       font-weight: 300;
       font-size: 1.25em; }
