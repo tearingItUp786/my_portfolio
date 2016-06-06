@@ -10,6 +10,19 @@ html, body
     font-size: +em(45)
     font-weight: $regular
 
+    @include bp-medium
+      font-size: +em(35)
+
+    @include bp-small
+      font-size: +em(25)
+
+
+  .grid_wrapper
+    width: 100%
+    max-width: 900px
+    margin-left: auto
+    margin-right: auto
+
   .yellow-bold
     color: $yellow
     font-weight: $bold

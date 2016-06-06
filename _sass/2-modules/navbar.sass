@@ -72,6 +72,7 @@
     opacity: 0
     height: auto
     width: 50%
+    min-width: 200px
     transform: translate(-100%, 0)
 
 
@@ -124,3 +125,11 @@
     border: solid 1px $black
     z-index: 2
     display: block
+
+@include bp-small
+  .c-hamburger
+    width: 80px
+    height: 80px
+
+    span
+      top: 40px

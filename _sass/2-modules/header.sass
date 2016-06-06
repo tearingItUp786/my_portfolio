@@ -23,7 +23,10 @@
       margin: 0
       font-weight: $light
       font-size: +em(30)
-
+      @include bp-medium
+        font-size: +em(20)
+      @include bp-small
+        font-size: +em(18)
   .mike
     position: absolute
     top: 70%
@@ -33,7 +36,15 @@
     .saying
       font-weight: $light
       font-size: +em(20)
+      @include bp-medium
+        font-size: +em(18)
+      @include bp-small
+        font-size: +em(16)
 
     .church
       font-weight: $light
       font-size: +em(20)
+      @include bp-medium
+        font-size: +em(18)
+      @include bp-small
+        font-size: +em(16)

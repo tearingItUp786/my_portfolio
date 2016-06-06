@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* -----------------------------------------------------------------------------
 
   HAMBURGER ICONS COMPONENT
@@ -466,6 +467,226 @@ textarea {
   font: inherit;
   /* 2 */ }
 
+/*-----------------------------------*
+  $TOAST-GRID
+
+  An insane grid.
+  You'd be mad to use it.
+
+  Usage
+  =====
+
+  Assuming default values:
+
+  <div class="grid">
+    <div class="grid__col grid__col--1-of-2">
+      A half-width column.
+    </div>
+    <div class="grid__col grid__col--1-of-4 grid__col--pull-1-of-4">
+      A quarter, pulled left by its own width. You get this, right?
+    </div>
+  </div>
+
+
+  Customisation
+  =============
+
+  $toast-grid-namespace and $toast-grid-column-namespace
+  adjusts the class names for the grid. With
+  default values, grid wrappers have a class
+  of '.grid' and columns '.grid__col'.
+
+  $toast-col-groups(n) adjusts column divisions.
+  For example, $toast-col-groups(12) will produce
+  a 12-column grid. $col-groups(3,6,8)
+  will produce a 3-, 6-, and 8-column grid.
+
+  $toast-gutter-width is—you guessed it—the gutter
+  width. Accepts any unit.
+
+  That's it. Have fun.
+
+\*-----------------------------------*/
+.grid {
+  list-style: none;
+  margin-left: -20px; }
+
+.grid__col--12-of-12 {
+  width: 100%; }
+
+.grid__col--6-of-12 {
+  width: 50%; }
+
+.grid__col--4-of-12 {
+  width: 33.3333333333%; }
+
+.grid__col--8-of-12 {
+  width: 66.6666666667%; }
+
+.grid__col--3-of-12 {
+  width: 25%; }
+
+.grid__col--9-of-12 {
+  width: 75%; }
+
+.grid__col--push-12-of-12 {
+  margin-left: 100%; }
+
+.grid__col--push-6-of-12 {
+  margin-left: 50%; }
+
+.grid__col--push-4-of-12 {
+  margin-left: 33.3333333333%; }
+
+.grid__col--push-8-of-12 {
+  margin-left: 66.6666666667%; }
+
+.grid__col--push-3-of-12 {
+  margin-left: 25%; }
+
+.grid__col--push-9-of-12 {
+  margin-left: 75%; }
+
+.grid__col--pull-12-of-12 {
+  margin-left: -100%; }
+
+.grid__col--pull-6-of-12 {
+  margin-left: -50%; }
+
+.grid__col--pull-4-of-12 {
+  margin-left: -33.3333333333%; }
+
+.grid__col--pull-8-of-12 {
+  margin-left: -66.6666666667%; }
+
+.grid__col--pull-3-of-12 {
+  margin-left: -25%; }
+
+.grid__col--pull-9-of-12 {
+  margin-left: -75%; }
+
+.grid__col--1-of-12 {
+  width: 8.3333333333%; }
+
+.grid__col--push-1-of-12 {
+  margin-left: 8.3333333333%; }
+
+.grid__col--pull-1-of-12 {
+  margin-left: -8.3333333333%; }
+
+.grid__col--2-of-12 {
+  width: 16.6666666667%; }
+
+.grid__col--push-2-of-12 {
+  margin-left: 16.6666666667%; }
+
+.grid__col--pull-2-of-12 {
+  margin-left: -16.6666666667%; }
+
+.grid__col--5-of-12 {
+  width: 41.6666666667%; }
+
+.grid__col--push-5-of-12 {
+  margin-left: 41.6666666667%; }
+
+.grid__col--pull-5-of-12 {
+  margin-left: -41.6666666667%; }
+
+.grid__col--7-of-12 {
+  width: 58.3333333333%; }
+
+.grid__col--push-7-of-12 {
+  margin-left: 58.3333333333%; }
+
+.grid__col--pull-7-of-12 {
+  margin-left: -58.3333333333%; }
+
+.grid__col--10-of-12 {
+  width: 83.3333333333%; }
+
+.grid__col--push-10-of-12 {
+  margin-left: 83.3333333333%; }
+
+.grid__col--pull-10-of-12 {
+  margin-left: -83.3333333333%; }
+
+.grid__col--11-of-12 {
+  width: 91.6666666667%; }
+
+.grid__col--push-11-of-12 {
+  margin-left: 91.6666666667%; }
+
+.grid__col--pull-11-of-12 {
+  margin-left: -91.6666666667%; }
+
+.grid__col {
+  box-sizing: border-box;
+  display: inline-block;
+  margin-right: -.25em;
+  min-height: 1px;
+  padding-left: 20px;
+  vertical-align: top; }
+  @media (max-width: 700px) {
+    .grid__col {
+      display: block;
+      margin-left: 0;
+      margin-right: 0;
+      width: auto; } }
+  @media (max-width: 700px) and (min-width: 480px) {
+    .grid__col[class*="grid__col--m-"] {
+      display: inline-block;
+      margin-right: -.24em; }
+    .grid__col.grid__col--m-1-of-2, .grid__col.grid__col--m-2-of-4 {
+      width: 50%; }
+    .grid__col.grid__col--m-1-of-3 {
+      width: 33.3333333333%; }
+    .grid__col.grid__col--m-2-of-3 {
+      width: 66.6666666667%; }
+    .grid__col.grid__col--m-1-of-4 {
+      width: 25%; }
+    .grid__col.grid__col--m-3-of-4 {
+      width: 75%; } }
+  @media (max-width: 480px) {
+    .grid__col[class*="grid__col--s-"] {
+      display: inline-block;
+      margin-right: -.24em; }
+    .grid__col.grid__col--s-1-of-2, .grid__col.grid__col--s-2-of-4 {
+      width: 50%; }
+    .grid__col.grid__col--s-1-of-3 {
+      width: 33.3333333333%; }
+    .grid__col.grid__col--s-2-of-3 {
+      width: 66.6666666667%; }
+    .grid__col.grid__col--s-1-of-4 {
+      width: 25%; }
+    .grid__col.grid__col--s-3-of-4 {
+      width: 75%; } }
+
+.grid__col--centered {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+.grid__col--d-first {
+  float: left; }
+
+.grid__col--d-last {
+  float: right; }
+
+.grid--no-gutter {
+  margin-left: 0;
+  width: 100%; }
+  .grid--no-gutter .grid__col {
+    padding-left: 0; }
+  .grid--no-gutter .grid__col--span-all {
+    margin-left: 0;
+    width: 100%; }
+
+.grid__col--ab {
+  vertical-align: bottom; }
+
+.grid__col--am {
+  vertical-align: middle; }
+
 html, body {
   height: 100%;
   width: 100%;
@@ -477,6 +698,17 @@ html, body {
     margin: 0;
     font-size: 2.8125em;
     font-weight: 400; }
+    @media only screen and (max-width: 50em) {
+      html .section-title, html .header .name-holder .name, .header .name-holder html .name, body .section-title, body .header .name-holder .name, .header .name-holder body .name {
+        font-size: 2.1875em; } }
+    @media only screen and (max-width: 30em) {
+      html .section-title, html .header .name-holder .name, .header .name-holder html .name, body .section-title, body .header .name-holder .name, .header .name-holder body .name {
+        font-size: 1.5625em; } }
+  html .grid_wrapper, body .grid_wrapper {
+    width: 100%;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto; }
   html .yellow-bold, body .yellow-bold {
     color: #f5ae00;
     font-weight: 700; }
@@ -570,6 +802,7 @@ html, body {
     opacity: 0;
     height: auto;
     width: 50%;
+    min-width: 200px;
     transform: translate(-100%, 0); }
     .navbar.open {
       opacity: 1;
@@ -640,6 +873,13 @@ html, body {
     z-index: 2;
     display: block; } }
 
+@media only screen and (max-width: 30em) {
+  .c-hamburger {
+    width: 80px;
+    height: 80px; }
+    .c-hamburger span {
+      top: 40px; } }
+
 .header {
   height: 100%;
   width: 100%;
@@ -660,6 +900,12 @@ html, body {
       margin: 0;
       font-weight: 300;
       font-size: 1.875em; }
+      @media only screen and (max-width: 50em) {
+        .header .name-holder .title {
+          font-size: 1.25em; } }
+      @media only screen and (max-width: 30em) {
+        .header .name-holder .title {
+          font-size: 1.125em; } }
   .header .mike {
     position: absolute;
     top: 70%;
@@ -668,9 +914,21 @@ html, body {
     .header .mike .saying {
       font-weight: 300;
       font-size: 1.25em; }
+      @media only screen and (max-width: 50em) {
+        .header .mike .saying {
+          font-size: 1.125em; } }
+      @media only screen and (max-width: 30em) {
+        .header .mike .saying {
+          font-size: 1em; } }
     .header .mike .church {
       font-weight: 300;
       font-size: 1.25em; }
+      @media only screen and (max-width: 50em) {
+        .header .mike .church {
+          font-size: 1.125em; } }
+      @media only screen and (max-width: 30em) {
+        .header .mike .church {
+          font-size: 1em; } }
 
 .about {
   min-height: 100%;
@@ -690,14 +948,24 @@ html, body {
     font-weight: 500; }
   .about .my-blurb {
     color: #ccc;
-    width: 50%;
-    margin: 5% auto 0 auto;
+    width: 70%;
+    margin: 10% auto 0 auto;
     max-width: 600px;
-    text-align: center;
-    font-size: 20px;
     font-size: 1.25em;
+    text-align: center;
     line-height: 1.5em;
-    font-weight: 400; }
+    font-weight: 400;
+    border-top: solid 1px #a0a0a0;
+    border-bottom: solid 1px #a0a0a0;
+    padding: 10px 0 10px 0; }
+    @media only screen and (max-width: 50em) {
+      .about .my-blurb {
+        width: 80%;
+        font-size: 1em; } }
+    @media only screen and (max-width: 30em) {
+      .about .my-blurb {
+        font-size: 0.875em;
+        width: 95%; } }
     .about .my-blurb .yellow {
       font-size: 1.875em; }
   .about .periscope {
@@ -708,7 +976,39 @@ html, body {
     background-position: center 0px;
     background-attachment: fixed;
     border-radius: 50%;
-    margin: 20% auto 20% auto; }
+    margin: 10% auto 20% auto; }
+    @media only screen and (max-width: 50em) {
+      .about .periscope {
+        width: 400px;
+        height: 400px;
+        background-position: right 0px; } }
+    @media only screen and (max-width: 30em) {
+      .about .periscope {
+        width: 300px;
+        height: 300px; } }
+
+.portfolio {
+  min-height: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 75px 0 75px 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/backgrounds/gallery_try_1-1920x1080.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed; }
+  .portfolio .section-title, .portfolio .header .name-holder .name, .header .name-holder .portfolio .name {
+    color: black;
+    width: 100%;
+    text-align: center;
+    margin: 0 0 0 0;
+    font-weight: 500; }
+  .portfolio .grid_wrapper .thumbnail img {
+    height: 100%;
+    width: 90%;
+    max-width: 100%;
+    margin: auto;
+    border: 1px solid #fff; }
 
 .footer {
   display: -webkit-box;

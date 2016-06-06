@@ -81,10 +81,15 @@ $(document).ready(function() {
             removeActiveClass();
         }
 
-        if (windowScroll >= $('.about').offset().top - 20) {
+        if ((windowScroll >= $('.about').offset().top - 20) && (windowScroll < $('.portfolio').offset().top - 20)) {
             removeActiveClass();
             $('.nav-item:nth-child(2) a').addClass('active');
-            $('.nav-item:nth-child(2)').addClass('active');
+        }
+
+        if (windowScroll >= $('.portfolio').offset().top - 20) {
+            console.log("in portfolio");
+            removeActiveClass();
+            $('.nav-item:nth-child(4) a').addClass('active');
         }
 
     });
