@@ -52,10 +52,10 @@ module.exports = function(grunt) {
                     engine: 'im',
                     newFilesOnly: false,
                     sizes: [{
-                        namge: "large",
-                        width: '300px',
-                        height: '300px',
-                        aspectRatio: false
+                        name: "small",
+                        width: '600px',
+                        height: '600px',
+                        aspectRatio: true
                     }],
                     quality: 100
                 },
@@ -65,9 +65,9 @@ module.exports = function(grunt) {
                     // cwd: 'images/originals/',
                     // dest: 'images/backgrounds/'
                     expand: true,
-                    src: ['business-1-try.jpg'],
-                    cwd: 'images/backgrounds/',
-                    dest: 'images/backgrounds/'
+                    src: ['**.{JPG,gif,png,jpg}'],
+                    cwd: 'images/project_images/originals/',
+                    dest: 'images/project_images/thumbnails/'
                 }]
             }
         },

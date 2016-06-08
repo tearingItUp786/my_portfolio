@@ -1,0 +1,48 @@
+Each Project To Include:
+1) Title
+2) Date Range
+3) Image
+4) Description
+5) Link
+
+Project 1:
+1) Portfolio Website - Makeup Artist
+2) May 5, 2016 - May 28, 2016
+3) Get one
+4) A freelance front-end web project that's purpose was to highlight the work of a local makeup artist. This was the first project in which I designed a logo, created mock ups using the Adobe Creative Suite, and utilized web technologies such as: grunt, the toast grid system, and sass.
+5) www.makeupbyravia.com
+
+Project 2:
+1) Neighbordhood Map V2.0
+2) April 20, 2016 - June 2, 2016
+3) Get One
+4) This was one of the projects in Udacity's Front-End Web Developer Nanodegree. The purposes of this project were to gain experience using the MVC pattern of development, a JavaScript Framework (Knockout.js), and third-party APIS. The app is a full-page map that loads data from Yelp pertaining to Indian restaurants in the greater Vancouver area. A user is able to update the map with their desired location and search terms.
+5) http://taran.bus.sfu.ca/HoodV2/
+
+Project 3:
+1) Udacity Resume
+2) February 1, 2016 - February 20, 2016
+3) Get One
+4) This was another project in Udacity's Front-End Web Developer Nanodegree. The purpose of this project was to practice basic JavaScript skills such as loops, functions and DOM manipulation. All of the resume's content is filled in dynamically with JavaScript.
+5) http://taran.bus.sfu.ca/frontend-nanodegree-resume/
+
+Project 4:
+1) Blog Version 1.0
+2) December 2014 - January 2015
+3) Get One
+4) This was my first ever web project. It is continually being updated so this section is subject to change. My latest version (which as been archived) was developed using PHP, MySQL, JavaScript, and Bootstrap. I created the content for this blog, used Git for version control and to manage my testing/production hosts, and performed several configurations to my server. 
+5) http://taran.bus.sfu.ca/time-for-a-revamp/
+
+Project 5: 
+1) 25toLife
+2) September 2015 - October 2015
+3) Get One
+4) First paid front end web development project. Utilized the bootstrap framework to create the layout. This project's purpose was to replace the outdated style with a more modern look within a constricted timeframe. The project had to be live within two weeks of development. 
+5) http://www.twentyfivetolife.ca/
+
+Project 6:
+1) Jasmine - Test Driven Development
+2) June 1, 2016 - June 8, 2016
+3) Get One
+4) This was a project in Udacity's Front-End Web Developer Nanodegree. The purposes of this project were to gain experience using a testing framework and to introduce students to test driven development in the JavaScript Language. 
+5) https://github.com/tearingItUp786/frontend-nanodegree-feedreader.git

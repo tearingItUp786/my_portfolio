@@ -9,45 +9,52 @@
     size: cover
     attachment: fixed
 
-  .name-holder
-    position: absolute
-    top: 40%
-    left: 5%
-    color: $white
-    @include bp-medium
-      transition: all 0.5s ease
-    .name
-      @extend .section-title
+  .test
+    +size(100% 100%)
+    position: relative
+    max-width: 1100px
+    margin: auto
 
-    .title
-      color: $lighter-white
-      margin: 0
-      font-weight: $light
-      font-size: +em(30)
+
+    .name-holder
+      position: absolute
+      top: 40%
+      left: 5%
+      color: $white
       @include bp-medium
+        transition: all 0.5s ease
+      .name
+        @extend .section-title
+
+      .title
+        color: $lighter-white
+        margin: 0
+        font-weight: $light
+        font-size: +em(30)
+        @include bp-medium
+          font-size: +em(20)
+        @include bp-small
+          font-size: +em(18)
+    .mike
+      position: absolute
+      top: 70%
+      left: 5%
+      color: $gray
+      @include bp-medium
+        transition: all 0.5s ease
+
+      .saying
+        font-weight: $light
         font-size: +em(20)
-      @include bp-small
-        font-size: +em(18)
-  .mike
-    position: absolute
-    top: 70%
-    left: 5%
-    color: $gray
-    @include bp-medium
-      transition: all 0.5s ease
+        @include bp-medium
+          font-size: +em(18)
+        @include bp-small
+          font-size: +em(16)
 
-    .saying
-      font-weight: $light
-      font-size: +em(20)
-      @include bp-medium
-        font-size: +em(18)
-      @include bp-small
-        font-size: +em(16)
-
-    .church
-      font-weight: $light
-      font-size: +em(20)
-      @include bp-medium
-        font-size: +em(18)
-      @include bp-small
-        font-size: +em(16)
+      .church
+        font-weight: $light
+        font-size: +em(20)
+        @include bp-medium
+          font-size: +em(18)
+        @include bp-small
+          font-size: +em(16)
