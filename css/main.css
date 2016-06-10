@@ -11,6 +11,8 @@
  * variant that will give them unique properties. This class is an overview
  * class that acts as a reset for all versions of the icon.
  */
+@import url(/vex/css/vex.css);
+@import url(/vex/css/vex-theme-wireframe.css);
 @import url("https://fonts.googleapis.com/css?family=Raleway:400,300,500,700");
 .c-hamburger {
   display: block;
@@ -687,6 +689,31 @@ textarea {
 .grid__col--am {
   vertical-align: middle; }
 
+.vex.vex-theme-wireframe {
+  padding-top: 50px;
+  padding-bottom: 50px; }
+  .vex.vex-theme-wireframe .vex-content {
+    font-family: 'Raleway', sans-serif;
+    width: 600px;
+    background: #0d0d0d;
+    color: #ccc;
+    border-color: #f5ae00; }
+    .vex.vex-theme-wireframe .vex-content figure {
+      margin: 0; }
+      .vex.vex-theme-wireframe .vex-content figure img {
+        height: 100%;
+        width: 100%; }
+    .vex.vex-theme-wireframe .vex-content h2 {
+      margin-bottom: 0;
+      font-weight: 500;
+      color: white; }
+    .vex.vex-theme-wireframe .vex-content h3 {
+      margin-top: 0;
+      font-weight: 500;
+      color: white; }
+    .vex.vex-theme-wireframe .vex-content .vex-close::before {
+      color: white; }
+
 html, body {
   height: 100%;
   width: 100%;
@@ -868,11 +895,12 @@ html, body {
           padding: 20px 50px 20px 50px; }
   .c-hamburger {
     position: fixed;
-    top: 0;
-    right: 0;
+    top: 1px;
+    right: 1px;
     border: solid 1px #0d0d0d;
     z-index: 2;
-    display: block; } }
+    display: block;
+    border-color: white; } }
 
 @media only screen and (max-width: 30em) {
   .c-hamburger {
@@ -1024,17 +1052,44 @@ html, body {
     font-weight: 500; }
   .portfolio .grid_wrapper .thumbnail {
     padding: 5% 0 0 0;
-    margin-top: 5%S; }
+    margin-top: 5%; }
     .portfolio .grid_wrapper .thumbnail img {
       display: block;
       height: 100%;
       width: 90%;
       margin: auto;
       border: 1px solid #fff;
-      transition: transform 0.3s ease;
-      cursor: pointer; }
+      transition: all 0.5s ease;
+      cursor: pointer;
+      opacity: 0;
+      transform: translateX(-20px); }
+      .portfolio .grid_wrapper .thumbnail img.is-showing {
+        opacity: 1;
+        transform: translateX(0px); }
       .portfolio .grid_wrapper .thumbnail img:hover {
         transform: scale(1.1, 1.1); }
+
+.contact {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-width: 100%;
+  min-height: 100%;
+  padding: 75px 0 75px 0;
+  background-image: linear-gradient(rgba(245, 174, 0, 0.8), rgba(245, 174, 0, 0.8)), url(/images/backgrounds/contact-1920x1080.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: left center; }
+  .contact .section-title, .contact .header .test .name-holder .name, .header .test .name-holder .contact .name {
+    color: black;
+    width: 100%;
+    text-align: center;
+    margin: 0 0 0 0;
+    font-weight: 500; }
 
 .footer {
   display: -webkit-box;

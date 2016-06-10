@@ -25,7 +25,7 @@ $(function() {
             if (target.length) {
                 $('html, body').animate({
                     scrollTop: target.offset().top
-                }, 500);
+                }, 800);
 
                 return false;
             }
@@ -47,6 +47,10 @@ $(document).ready(function() {
     $('#home').css({
         'height': initHeight
     });
+    $('#contact').css({
+        'height': initHeight
+    });
+
 
     $(window).resize(function() {
         var currentHeight = $(window).height();
@@ -59,10 +63,16 @@ $(document).ready(function() {
             $('#home').css({
                 'height': currentHeight + 56
             });
+            $('#contact').css({
+                'height': currentHeight + 56
+            });
             initHeight = currentHeight;
         } else if (heightDifferece < -56) {
             console.log("Current Height was less by init height more than navbar")
             $('#home').css({
+                'height': currentHeight + 56
+            });
+            $('#contact').css({
                 'height': currentHeight + 56
             });
             initHeight = currentHeight;
@@ -78,11 +88,11 @@ $(document).ready(function() {
         window.requestAnimationFrame(function() {
             if (windowScroll < windowWidth) {
                 $('.name-holder').css({
-                    'transform': 'translate(-' + windowScroll*2 + 'px, 0)'
+                    'transform': 'translate(-' + windowScroll * 2 + 'px, 0)'
                 });
 
                 $('.mike').css({
-                    'transform': 'translate(' + windowScroll*2 + 'px, 0)'
+                    'transform': 'translate(' + windowScroll * 2 + 'px, 0)'
                 });
             }
         });
@@ -104,10 +114,29 @@ $(document).ready(function() {
             $('.nav-item:nth-child(2) a').addClass('active');
         }
 
+        if (windowScroll >= $('.portfolio').offset().top - 300) {
+            window.requestAnimationFrame(function() {
+                if (false == $('.portfolio .thumbnail img').hasClass('is-showing')) {
+                    $('.portfolio .thumbnail img').each(function(i) {
+                        setTimeout(function() {
+                            $('.portfolio .thumbnail img').eq(i).addClass('is-showing');
+                        }, (1000 * (Math.exp(i * 0.14))) - 1000);
+
+                    });
+                }
+            });
+        }
+
         if (windowScroll >= $('.portfolio').offset().top - 20) {
             console.log("in portfolio");
             removeActiveClass();
             $('.nav-item:nth-child(4) a').addClass('active');
+        }
+
+        if (windowScroll >= $('.contact').offset().top - 20) {
+            console.log("in contact");
+            removeActiveClass();
+            $('.nav-item:nth-child(5) a').addClass('active');
         }
 
     });
@@ -117,14 +146,56 @@ $(document).ready(function() {
 var projects = [{
     'id': 'project1',
     'attributes': {
-        'name': 'First project',
-        'date': 'May 2016'
+        'name': 'Portfolio Website - Makeup Artist',
+        'date': 'May 5, 2016 - May 28, 2016',
+        'image': '/images/project_images/originals/makeupbyravia.jpg',
+        'description': "A freelance front-end web project that's purpose was to highlight the work of a local makeup artist. This was the first project in which I designed a logo, created mock ups using the Adobe Creative Suite, and utilized web technologies such as: grunt, the toast grid system, and sass.",
+        'url': 'www.makeupbyravia.com'
     }
 }, {
     'id': 'project2',
     'attributes': {
-        'name': 'Second project',
-        'date': 'May 2016'
+        'name': 'Neighbordhood Map V2.0',
+        'date': 'April 20, 2016 - June 2, 2016',
+        'image': '/images/project_images/originals/map.jpg',
+        'description': "This was one of the projects in Udacity's Front-End Web Developer Nanodegree. The purposes of this project were to gain experience using the MVC pattern of development, a JavaScript Framework (Knockout.js), and third-party APIS. The app is a full-page map that loads data from Yelp pertaining to Indian restaurants in the greater Vancouver area. A user is able to update the map with their desired location and search terms.",
+        'url': 'http://taran.bus.sfu.ca/HoodV2/'
+    }
+}, {
+    'id': 'project3',
+    'attributes': {
+        'name': 'Udacity Resume',
+        'date': 'February 1, 2016 - February 20, 2016',
+        'image': '/images/project_images/originals/resume.jpg',
+        'description': "This was another project in Udacity's Front-End Web Developer Nanodegree. The purpose of this project was to practice basic JavaScript skills such as loops, functions and DOM manipulation. All of the resume's content is filled in dynamically with JavaScript.",
+        'url': 'http://taran.bus.sfu.ca/frontend-nanodegree-resume/'
+    }
+}, {
+    'id': 'project4',
+    'attributes': {
+        'name': 'Blog Version 1.0',
+        'date': 'December 2014 - January 2015',
+        'image': '/images/project_images/originals/blog1.jpg',
+        'description': "This was my first ever web project. It is continually being updated so this section is subject to change. My latest version (which as been archived) was developed using PHP, MySQL, JavaScript, and Bootstrap. I created the content for this blog, used Git for version control and to manage my testing/production hosts, and performed several configurations to my server.",
+        'url': 'http://taran.bus.sfu.ca/time-for-a-revamp/'
+    }
+}, {
+    'id': 'project5',
+    'attributes': {
+        'name': '25toLife',
+        'date': 'September 2015 - October 2015',
+        'image': '/images/project_images/originals/twentyfivetolife.jpg',
+        'description': "First paid front end web development project. Utilized the bootstrap framework to create the layout. This project's purpose was to replace the outdated style with a more modern look within a constricted timeframe. The project had to be live within two weeks of development.",
+        'url': 'http://www.twentyfivetolife.ca/'
+    }
+}, {
+    'id': 'project6',
+    'attributes': {
+        'name': 'Jasmine - Test Driven Development',
+        'date': 'June 1, 2016 - June 8, 2016',
+        'image': '/images/project_images/originals/jasmine.jpg',
+        'description': "This was a project in Udacity's Front-End Web Developer Nanodegree. The purposes of this project were to gain experience using a testing framework and to introduce students to test driven development in the JavaScript Language.",
+        'url': 'https://github.com/tearingItUp786/frontend-nanodegree-feedreader.git'
     }
 }];
 
@@ -135,13 +206,11 @@ function openDialog(param) {
             if (projects[key].id === param.id) {
                 console.log("We have a match");
                 console.log(projects[key].attributes);
-                vex.dialog.confirm({
-                    message: 'Are you absolutely sure you want to destroy the alien planet?',
-                    callback: function(value) {
-                        return console.log(value ? 'Successfully destroyed the planet.' : 'Chicken.');
-                    }
+                var project = projects[key].attributes;
+                vex.defaultOptions.className = 'vex-theme-wireframe';
+                vex.open({
+                    content: '<h2>' + project.name + '</h2><h3>' + project.date + '</h3><figure><img src="' + project.image + '"/></figure><p>' + project.description + '</p>'
                 });
-
             }
         }
     }
