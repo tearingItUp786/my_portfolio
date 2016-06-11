@@ -47,9 +47,6 @@ $(document).ready(function() {
     $('#home').css({
         'height': initHeight
     });
-    $('#contact').css({
-        'height': initHeight
-    });
 
 
     $(window).resize(function() {
@@ -63,16 +60,10 @@ $(document).ready(function() {
             $('#home').css({
                 'height': currentHeight + 56
             });
-            $('#contact').css({
-                'height': currentHeight + 56
-            });
             initHeight = currentHeight;
         } else if (heightDifferece < -56) {
             console.log("Current Height was less by init height more than navbar")
             $('#home').css({
-                'height': currentHeight + 56
-            });
-            $('#contact').css({
                 'height': currentHeight + 56
             });
             initHeight = currentHeight;
@@ -120,7 +111,7 @@ $(document).ready(function() {
                     $('.portfolio .thumbnail img').each(function(i) {
                         setTimeout(function() {
                             $('.portfolio .thumbnail img').eq(i).addClass('is-showing');
-                        }, (1000 * (Math.exp(i * 0.14))) - 1000);
+                        }, (700 * (Math.exp(i * 0.14))) - 700);
 
                     });
                 }
@@ -149,8 +140,10 @@ var projects = [{
         'name': 'Portfolio Website - Makeup Artist',
         'date': 'May 5, 2016 - May 28, 2016',
         'image': '/images/project_images/originals/makeupbyravia.jpg',
-        'description': "A freelance front-end web project that's purpose was to highlight the work of a local makeup artist. This was the first project in which I designed a logo, created mock ups using the Adobe Creative Suite, and utilized web technologies such as: grunt, the toast grid system, and sass.",
-        'url': 'www.makeupbyravia.com'
+        'image_caption': 'Makeupbyravia: A surrey based makeup artist.',
+        'description': "A freelance front-end web project that's purpose was to highlight the work of a local makeup artist. My role was to design the logo and the website in its entirety.",
+        'technology_stack': ['HTML', 'SASS', 'Grunt', 'Git', 'Jekyll', 'Illustrator', 'Photoshop', 'JavaScript/jQuery'],
+        'url': 'http://makeupbyravia.com/'
     }
 }, {
     'id': 'project2',
@@ -158,7 +151,9 @@ var projects = [{
         'name': 'Neighbordhood Map V2.0',
         'date': 'April 20, 2016 - June 2, 2016',
         'image': '/images/project_images/originals/map.jpg',
-        'description': "This was one of the projects in Udacity's Front-End Web Developer Nanodegree. The purposes of this project were to gain experience using the MVC pattern of development, a JavaScript Framework (Knockout.js), and third-party APIS. The app is a full-page map that loads data from Yelp pertaining to Indian restaurants in the greater Vancouver area. A user is able to update the map with their desired location and search terms.",
+        'image_caption': 'HoodMap: A map built with the Yelp API and Google Maps',
+        'technology_stack': ['HTML', 'SASS', 'Grunt', 'Git', 'Knockoust JS', 'Illustrator', 'Yelp API', 'Google Maps', 'JavaScript/jQuery'],
+        'description': "This was one of the projects in Udacity's Front-End Web Developer Nanodegree. The purposes of this project were to gain experience using the MVC pattern of development, a JavaScript Framework (Knockout.js), and third-party APIS.",
         'url': 'http://taran.bus.sfu.ca/HoodV2/'
     }
 }, {
@@ -167,7 +162,9 @@ var projects = [{
         'name': 'Udacity Resume',
         'date': 'February 1, 2016 - February 20, 2016',
         'image': '/images/project_images/originals/resume.jpg',
-        'description': "This was another project in Udacity's Front-End Web Developer Nanodegree. The purpose of this project was to practice basic JavaScript skills such as loops, functions and DOM manipulation. All of the resume's content is filled in dynamically with JavaScript.",
+        'image_caption': 'Resume: Built dynamically with JavaScript',
+        'description': "This was another project in Udacity's Front-End Web Developer Nanodegree. The purpose of this project was to practice basic JavaScript skills such as loops, functions and DOM manipulation.",
+        'technology_stack': ['HTML', 'CSS', 'Git', 'Google Maps', 'JavaScript/jQuery'],
         'url': 'http://taran.bus.sfu.ca/frontend-nanodegree-resume/'
     }
 }, {
@@ -176,7 +173,9 @@ var projects = [{
         'name': 'Blog Version 1.0',
         'date': 'December 2014 - January 2015',
         'image': '/images/project_images/originals/blog1.jpg',
-        'description': "This was my first ever web project. It is continually being updated so this section is subject to change. My latest version (which as been archived) was developed using PHP, MySQL, JavaScript, and Bootstrap. I created the content for this blog, used Git for version control and to manage my testing/production hosts, and performed several configurations to my server.",
+        'image_caption': 'My first attempt at building a blog using PHP and MySQL',
+        'description': "This was my first ever web project. It is continually being updated so this section is subject to change. I created the content for this blog, used Git for version control and to manage my testing/production hosts, and performed several configurations to my server.",
+        'technology_stack': ['HTML', 'CSS', 'Git', 'MySQL', 'Bootstrap', 'Photoshop', 'JavaScript/jQuery'],
         'url': 'http://taran.bus.sfu.ca/time-for-a-revamp/'
     }
 }, {
@@ -185,7 +184,9 @@ var projects = [{
         'name': '25toLife',
         'date': 'September 2015 - October 2015',
         'image': '/images/project_images/originals/twentyfivetolife.jpg',
+        'image_caption': 'Twentyfivetolife: A website built for BUS 361',
         'description': "First paid front end web development project. Utilized the bootstrap framework to create the layout. This project's purpose was to replace the outdated style with a more modern look within a constricted timeframe. The project had to be live within two weeks of development.",
+        'technology_stack': ['HTML', 'CSS', 'Git', 'Bootstrap', 'JavaScript/jQuery'],
         'url': 'http://www.twentyfivetolife.ca/'
     }
 }, {
@@ -194,7 +195,9 @@ var projects = [{
         'name': 'Jasmine - Test Driven Development',
         'date': 'June 1, 2016 - June 8, 2016',
         'image': '/images/project_images/originals/jasmine.jpg',
-        'description': "This was a project in Udacity's Front-End Web Developer Nanodegree. The purposes of this project were to gain experience using a testing framework and to introduce students to test driven development in the JavaScript Language.",
+        'image_caption': 'Jasmine Project: Test driven development intro',
+        'description': "This was a project in Udacity's Front-End Web Developer Nanodegree. The purposes of this project were to gain experience using a testing framework and to introduce students to test driven development in the JavaScript language.",
+        'technology_stack': ['HTML', 'CSS', 'Git', 'Jasmine', 'JavaScript/jQuery'],
         'url': 'https://github.com/tearingItUp786/frontend-nanodegree-feedreader.git'
     }
 }];
@@ -204,12 +207,27 @@ function openDialog(param) {
     for (var key in projects) {
         if (projects.hasOwnProperty(key)) {
             if (projects[key].id === param.id) {
-                console.log("We have a match");
-                console.log(projects[key].attributes);
                 var project = projects[key].attributes;
+
+                var list_of_technologies = ""
+                for (var technology in project.technology_stack) {
+                    if (project.technology_stack.hasOwnProperty(technology)) {
+                        list_of_technologies += ('<li>' + project.technology_stack[technology] + '</li>');
+                    }
+                }
+
                 vex.defaultOptions.className = 'vex-theme-wireframe';
                 vex.open({
-                    content: '<h2>' + project.name + '</h2><h3>' + project.date + '</h3><figure><img src="' + project.image + '"/></figure><p>' + project.description + '</p>'
+                    content: '<div class="project-info"><h2 class="project-name">' + project.name + '</h2><h3 class="project-date">' + project.date + '</h3>' +
+                        '<p class="project-description">' + project.description + '</p></div>' +
+                        '<figure><img src="' + project.image + '"/><figcaption>' +
+                        project.image_caption + '</figcaption></figure>' +
+                        '<div class="technology-stack">' +
+                        '<h2 class="technology-stack-title">Technology Stack</h2>' +
+                        '<ul class="technology-list">' + list_of_technologies + '</ul></div>' +
+                        '<div class="url-box"><h2 class="link">URL</h2>' +
+                        '<a class="url" target="_blank" href="' + project.url + '">' + project.url + '</a>' +
+                        '</div>'
                 });
             }
         }

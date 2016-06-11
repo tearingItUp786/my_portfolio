@@ -52,9 +52,9 @@ module.exports = function(grunt) {
                     engine: 'im',
                     newFilesOnly: false,
                     sizes: [{
-                        name: "small",
-                        width: '600px',
-                        height: '600px',
+                        // name: "small",
+                        width: '1920px',
+                        height: '1080px',
                         aspectRatio: true
                     }],
                     quality: 100
@@ -66,8 +66,8 @@ module.exports = function(grunt) {
                     // dest: 'images/backgrounds/'
                     expand: true,
                     src: ['**.{JPG,gif,png,jpg}'],
-                    cwd: 'images/project_images/originals/',
-                    dest: 'images/project_images/thumbnails/'
+                    cwd: 'images//originals/',
+                    dest: 'images/backgrounds/'
                 }]
             }
         },

@@ -11,9 +11,9 @@
  * variant that will give them unique properties. This class is an overview
  * class that acts as a reset for all versions of the icon.
  */
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,300,500,700");
 @import url(/vex/css/vex.css);
 @import url(/vex/css/vex-theme-wireframe.css);
-@import url("https://fonts.googleapis.com/css?family=Raleway:400,300,500,700");
 .c-hamburger {
   display: block;
   position: relative;
@@ -689,31 +689,6 @@ textarea {
 .grid__col--am {
   vertical-align: middle; }
 
-.vex.vex-theme-wireframe {
-  padding-top: 50px;
-  padding-bottom: 50px; }
-  .vex.vex-theme-wireframe .vex-content {
-    font-family: 'Raleway', sans-serif;
-    width: 600px;
-    background: #0d0d0d;
-    color: #ccc;
-    border-color: #f5ae00; }
-    .vex.vex-theme-wireframe .vex-content figure {
-      margin: 0; }
-      .vex.vex-theme-wireframe .vex-content figure img {
-        height: 100%;
-        width: 100%; }
-    .vex.vex-theme-wireframe .vex-content h2 {
-      margin-bottom: 0;
-      font-weight: 500;
-      color: white; }
-    .vex.vex-theme-wireframe .vex-content h3 {
-      margin-top: 0;
-      font-weight: 500;
-      color: white; }
-    .vex.vex-theme-wireframe .vex-content .vex-close::before {
-      color: white; }
-
 html, body {
   height: 100%;
   width: 100%;
@@ -728,7 +703,7 @@ html, body {
     @media only screen and (max-width: 50em) {
       html .section-title, html .header .test .name-holder .name, .header .test .name-holder html .name, body .section-title, body .header .test .name-holder .name, .header .test .name-holder body .name {
         font-size: 2.1875em; } }
-    @media only screen and (max-width: 30em) {
+    @media only screen and (max-width: 35em) {
       html .section-title, html .header .test .name-holder .name, .header .test .name-holder html .name, body .section-title, body .header .test .name-holder .name, .header .test .name-holder body .name {
         font-size: 1.5625em; } }
   html .grid_wrapper, body .grid_wrapper {
@@ -902,7 +877,7 @@ html, body {
     display: block;
     border-color: white; } }
 
-@media only screen and (max-width: 30em) {
+@media only screen and (max-width: 35em) {
   .c-hamburger {
     width: 90px;
     height: 80px; }
@@ -947,7 +922,7 @@ html, body {
         @media only screen and (max-width: 50em) {
           .header .test .name-holder .title {
             font-size: 1.25em; } }
-        @media only screen and (max-width: 30em) {
+        @media only screen and (max-width: 35em) {
           .header .test .name-holder .title {
             font-size: 1.125em; } }
     .header .test .mike {
@@ -964,7 +939,7 @@ html, body {
         @media only screen and (max-width: 50em) {
           .header .test .mike .saying {
             font-size: 1.125em; } }
-        @media only screen and (max-width: 30em) {
+        @media only screen and (max-width: 35em) {
           .header .test .mike .saying {
             font-size: 1em; } }
       .header .test .mike .church {
@@ -973,7 +948,7 @@ html, body {
         @media only screen and (max-width: 50em) {
           .header .test .mike .church {
             font-size: 1.125em; } }
-        @media only screen and (max-width: 30em) {
+        @media only screen and (max-width: 35em) {
           .header .test .mike .church {
             font-size: 1em; } }
 
@@ -1009,7 +984,7 @@ html, body {
       .about .my-blurb {
         width: 80%;
         font-size: 1em; } }
-    @media only screen and (max-width: 30em) {
+    @media only screen and (max-width: 35em) {
       .about .my-blurb {
         font-size: 0.875em;
         width: 95%; } }
@@ -1029,7 +1004,7 @@ html, body {
         width: 400px;
         height: 400px;
         background-position: right 0px; } }
-    @media only screen and (max-width: 30em) {
+    @media only screen and (max-width: 35em) {
       .about .periscope {
         width: 300px;
         height: 300px; } }
@@ -1070,26 +1045,63 @@ html, body {
         transform: scale(1.1, 1.1); }
 
 .contact {
-  display: -webkit-box;
-  display: -moz-box;
-  display: box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-  min-width: 100%;
-  min-height: 100%;
+  height: auto;
+  width: 100%;
   padding: 75px 0 75px 0;
-  background-image: linear-gradient(rgba(245, 174, 0, 0.8), rgba(245, 174, 0, 0.8)), url(/images/backgrounds/contact-1920x1080.jpg);
+  background-image: linear-gradient(rgba(245, 174, 0, 0.8), rgba(245, 174, 0, 0.8)), url(/images/backgrounds/contact2-1920x1080.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position: left center; }
+  background-position: top left; }
   .contact .section-title, .contact .header .test .name-holder .name, .header .test .name-holder .contact .name {
     color: black;
     width: 100%;
     text-align: center;
     margin: 0 0 0 0;
     font-weight: 500; }
+  .contact .form {
+    box-sizing: border-box;
+    max-width: 800px;
+    margin: auto;
+    height: 80%;
+    padding: 5%; }
+    .contact .form .sender, .contact .form .sender-name, .contact .form .sender-email, .contact .form .sender-text {
+      padding: 10px;
+      border-radius: 5px;
+      background-color: #0d0d0d;
+      color: #ccc;
+      border: solid 1px #0d0d0d;
+      font-family: "Raleway", sans-serif; }
+      .contact .form .sender:focus, .contact .form .sender-name:focus, .contact .form .sender-email:focus, .contact .form .sender-text:focus {
+        outline: none !important;
+        border: 1px solid #fff;
+        box-shadow: 0 0 10px #719ECE; }
+    .contact .form .sender-name {
+      width: 80%;
+      max-width: 200px;
+      margin-bottom: 2%; }
+    .contact .form .sender-email {
+      width: 80%;
+      max-width: 200px;
+      margin-bottom: 2%; }
+    .contact .form .sender-text {
+      width: 97%;
+      max-width: 800px;
+      height: 50vh;
+      max-height: 400px; }
+      @media only screen and (max-width: 50em) {
+        .contact .form .sender-text {
+          width: 96%; } }
+      @media only screen and (max-width: 35em) {
+        .contact .form .sender-text {
+          width: 94%; } }
+    .contact .form .submit {
+      cursor: pointer;
+      font-family: "Raleway", sans-serif;
+      padding: 10px 20px 10px 20px;
+      float: right;
+      border: 2px solid #0d0d0d;
+      background: #0d0d0d;
+      color: #f5ae00; }
 
 .footer {
   display: -webkit-box;
@@ -1141,7 +1153,7 @@ html, body {
     text-align: center;
     font-weight: 400;
     margin: 0 0 0.5em 0; }
-    @media only screen and (max-width: 30em) {
+    @media only screen and (max-width: 35em) {
       .footer .designed {
         font-size: 1em; } }
   .footer .quote {
@@ -1150,6 +1162,145 @@ html, body {
     margin-top: 0;
     font-style: italic;
     font-weight: 400; }
-    @media only screen and (max-width: 30em) {
+    @media only screen and (max-width: 35em) {
       .footer .quote {
-        font-size: 1em; } }
+        font-size: 0.8em; } }
+
+.vex.vex-theme-wireframe {
+  padding-top: 50px;
+  padding-bottom: 50px; }
+  .vex.vex-theme-wireframe .vex-overlay {
+    background: rgba(13, 13, 13, 0.9); }
+  .vex.vex-theme-wireframe .vex-content {
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-lines: multiple;
+    -moz-box-lines: multiple;
+    box-lines: multiple;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    font-family: 'Raleway', sans-serif;
+    width: 800px;
+    background: rgba(13, 13, 13, 0.8);
+    color: #ccc;
+    border: solid 1px #f5ae00; }
+    .vex.vex-theme-wireframe .vex-content .project-info {
+      height: 50%;
+      width: 50%;
+      margin-right: 5%; }
+      @media only screen and (max-width: 50em) {
+        .vex.vex-theme-wireframe .vex-content .project-info {
+          margin-right: 10%; } }
+      @media only screen and (max-width: 35em) {
+        .vex.vex-theme-wireframe .vex-content .project-info {
+          height: auto;
+          width: 100%;
+          margin-right: 0; } }
+      .vex.vex-theme-wireframe .vex-content .project-info .project-name {
+        color: white;
+        font-size: 1.125em;
+        font-weight: 500;
+        margin-bottom: 0;
+        line-height: 0.8em; }
+        @media only screen and (max-width: 50em) {
+          .vex.vex-theme-wireframe .vex-content .project-info .project-name {
+            font-size: 1em; } }
+      .vex.vex-theme-wireframe .vex-content .project-info .project-date {
+        font-weight: 300;
+        color: #ccc;
+        font-size: 1em;
+        margin-top: 0;
+        margin-bottom: 0.5em;
+        border-bottom: 1px solid #f5ae00; }
+        @media only screen and (max-width: 50em) {
+          .vex.vex-theme-wireframe .vex-content .project-info .project-date {
+            font-size: 0.875em; } }
+      .vex.vex-theme-wireframe .vex-content .project-info .project-description {
+        font-size: 0.875em;
+        line-height: 1.4em;
+        margin-top: 0; }
+    .vex.vex-theme-wireframe .vex-content figure {
+      margin: 0;
+      height: 45%;
+      width: 45%; }
+      @media only screen and (max-width: 50em) {
+        .vex.vex-theme-wireframe .vex-content figure {
+          height: 40%;
+          width: 40%; } }
+      @media only screen and (max-width: 35em) {
+        .vex.vex-theme-wireframe .vex-content figure {
+          display: none; } }
+      .vex.vex-theme-wireframe .vex-content figure img {
+        height: 100%;
+        width: 100%; }
+      .vex.vex-theme-wireframe .vex-content figure figcaption {
+        font-size: 0.625em;
+        line-height: 1.4em; }
+    .vex.vex-theme-wireframe .vex-content .technology-stack {
+      height: auto;
+      width: 40%;
+      margin-top: 1%; }
+      @media only screen and (max-width: 50em) {
+        .vex.vex-theme-wireframe .vex-content .technology-stack {
+          margin-top: 0; } }
+      @media only screen and (max-width: 35em) {
+        .vex.vex-theme-wireframe .vex-content .technology-stack {
+          height: auto;
+          width: 100%;
+          margin-left: 0; } }
+      .vex.vex-theme-wireframe .vex-content .technology-stack .technology-stack-title {
+        margin-bottom: 0;
+        font-weight: 300;
+        font-size: 1.125em;
+        color: white;
+        border-bottom: solid 1px #f5ae00; }
+      .vex.vex-theme-wireframe .vex-content .technology-stack .technology-list {
+        list-style-type: none;
+        padding: 0;
+        -webkit-columns: 2;
+        -moz-columns: 2;
+        columns: 2;
+        margin-top: 0.2em; }
+        .vex.vex-theme-wireframe .vex-content .technology-stack .technology-list li {
+          font-size: 0.875em; }
+    .vex.vex-theme-wireframe .vex-content .url-box {
+      height: auto;
+      width: 40%;
+      margin-left: 10%;
+      margin-top: 1%; }
+      @media only screen and (max-width: 50em) {
+        .vex.vex-theme-wireframe .vex-content .url-box {
+          margin-left: 15%; } }
+      @media only screen and (max-width: 35em) {
+        .vex.vex-theme-wireframe .vex-content .url-box {
+          height: auto;
+          width: 100%;
+          margin-left: 0; } }
+      .vex.vex-theme-wireframe .vex-content .url-box .link {
+        margin-bottom: 0;
+        font-size: 1.125em;
+        font-weight: 400;
+        border-bottom: solid 1px #f5ae00; }
+      .vex.vex-theme-wireframe .vex-content .url-box .url {
+        text-decoration: none;
+        color: inherit;
+        font-size: 0.875em;
+        transition: all 0.2s; }
+        .vex.vex-theme-wireframe .vex-content .url-box .url:hover {
+          color: #f5ae00;
+          font-size: 1em; }
+        @media only screen and (max-width: 50em) {
+          .vex.vex-theme-wireframe .vex-content .url-box .url {
+            padding: 30px 0 30px 0; } }
+    .vex.vex-theme-wireframe .vex-content .vex-close::before {
+      color: white;
+      font-size: 50px;
+      line-height: 30px;
+      width: 30px; }

@@ -1,13 +1,11 @@
 .contact
-  +display(flex)
-  min-width: 100%
-  min-height: 100%
+  +size(100% auto)
   padding: 75px 0 75px 0
   background:
-    image: linear-gradient(rgba($yellow,.8),rgba($yellow,.8)),url(/images/backgrounds/contact-1920x1080.jpg)
+    image: linear-gradient(rgba($yellow,.8),rgba($yellow,.8)),url(/images/backgrounds/contact2-1920x1080.jpg)
     repeat: no-repeat
     attachment: fixed
-    position: left center
+    position: top left
 
   .section-title
     color: black
@@ -15,3 +13,55 @@
     text-align: center
     margin: 0 0 0 0
     font-weight: $medium
+
+  .form
+    box-sizing: border-box
+    max-width: 800px
+    margin: auto
+    height: 80%
+    padding: 5%
+
+    .sender
+      padding: 10px
+      border-radius: 5px
+      background:
+        color: $black
+      color: $lighter-white
+      border: solid 1px $black
+      font-family: $font-stack
+      &:focus
+        outline: none !important
+        border: 1px solid $white
+        box-shadow: 0 0 10px #719ECE
+
+    .sender-name
+      @extend .sender
+      width: 80%
+      max-width: 200px
+      margin-bottom: 2%
+
+    .sender-email
+      @extend .sender
+      width: 80%
+      max-width: 200px
+      margin-bottom: 2%
+
+    .sender-text
+      @extend .sender
+      width: 97%
+      max-width: 800px
+      height: 50vh
+      max-height: 400px
+      @include bp-medium
+        width: 96%
+      @include bp-small
+        width: 94%
+
+    .submit
+      cursor: pointer
+      font-family: $font-stack
+      padding: 10px 20px 10px 20px
+      float: right
+      border: 2px solid $black
+      background: $black
+      color: $yellow

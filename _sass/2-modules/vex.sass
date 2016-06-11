@@ -1,0 +1,128 @@
+
+@import "/vex/css/vex.css"
+@import "/vex/css/vex-theme-wireframe.css"
+
+.vex.vex-theme-wireframe
+  padding-top: 50px
+  padding-bottom: 50px
+
+  .vex-overlay
+    background: rgba(13, 13, 13, 0.9)
+
+  .vex-content
+    +display(flex)
+    +flex-wrap(wrap)
+    font-family: 'Raleway', sans-serif
+    width: 800px
+    background: rgba(#0d0d0d, 0.8)
+    color: #ccc
+    border: solid 1px $yellow
+
+
+    .project-info
+      +size(50% 50%)
+      margin-right: 5%
+      @include bp-medium
+        margin-right: 10%
+      @include bp-small
+        +size(100% auto)
+        margin-right: 0
+
+      .project-name
+        color: white
+        font-size: +em(18)
+        font-weight: $medium
+        margin-bottom: 0
+        line-height: 0.8em
+        @include bp-medium
+          font-size: +em(16)
+
+      .project-date
+        font-weight: $light
+        color: #ccc
+        font-size: +em(16)
+        margin-top: 0
+        margin-bottom: 0.5em
+        border-bottom: 1px solid $yellow
+        @include bp-medium
+          font-size: +em(14)
+
+      .project-description
+        font-size: +em(14)
+        line-height: 1.4em
+        margin-top: 0
+
+    figure
+      margin: 0
+      +size(45% 45%)
+      @include bp-medium
+        +size(40% 40%)
+
+      @include bp-small
+        display: none
+
+      img
+        +size(100% 100%)
+      figcaption
+        font-size: +em(10)
+        line-height: 1.4em
+    .technology-stack
+      +size(40% auto)
+      margin-top: 1%
+      @include bp-medium
+        margin-top: 0
+      @include bp-small
+        +size(100% auto)
+        margin-left: 0
+
+      .technology-stack-title
+        margin-bottom: 0
+        font-weight: $light
+        font-size: +em(18)
+        color: white
+        border-bottom: solid 1px $yellow
+
+      .technology-list
+        list-style-type: none
+        padding: 0
+        +columns(2)
+        margin-top: 0.2em
+
+        li
+          font-size: +em(14)
+
+
+    .url-box
+      +size(40% auto)
+      margin-left: 10%
+      margin-top: 1%
+      @include bp-medium
+        margin-left: 15%
+      @include bp-small
+        +size(100% auto)
+        margin-left: 0
+
+      .link
+        margin-bottom: 0
+        font-size: +em(18)
+        font-weight: $regular
+        border-bottom: solid 1px $yellow
+
+      .url
+        text-decoration: none
+        color: inherit
+        font-size: +em(14)
+        transition: all 0.2s
+
+        &:hover
+          color: $yellow
+          font-size: +em(16)
+
+        @include bp-medium
+          padding: 30px 0 30px 0
+
+    .vex-close::before
+      color: white
+      font-size: 50px
+      line-height: 30px
+      width: 30px
