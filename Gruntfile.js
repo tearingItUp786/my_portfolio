@@ -52,12 +52,20 @@ module.exports = function(grunt) {
                     engine: 'im',
                     newFilesOnly: false,
                     sizes: [{
-                        // name: "small",
+                        name: "large",
                         width: '1920px',
                         height: '1080px',
                         aspectRatio: true
+                    }, {
+                        name: "medium",
+                        width: '1024px',
+                        height: '786px',
+                    }, {
+                        name: "small",
+                        width: '640',
+                        height: '480'
                     }],
-                    quality: 100
+                    quality: 90
                 },
                 files: [{
                     // expand: true,

@@ -4,11 +4,15 @@
   box-sizing: border-box
   padding: 75px 0 75px 0
   background:
-    image: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),url(/images/backgrounds/coding_blur-1920x1080.jpg)
+    image: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),url(/images/backgrounds/coding_blur-large.jpg)
     repeat: no-repeat
     position: center
     size: cover
     attachment: fixed
+  @include bp-medium
+    background-image: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),url(/images/backgrounds/coding_blur-medium.jpg)
+  @include bp-small
+    background-image: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),url(/images/backgrounds/coding_blur-small.jpg)
 
   .section-title
     color: white
@@ -45,17 +49,20 @@
   .periscope
     +size(500px 500px)
     background:
-      image: url("/images/backgrounds/business-1-try.jpg")
+      image: url("/images/backgrounds/business-1-medium.jpg")
       size: contain
-      position: center 0px
+      position: left 0px
       attachment: fixed
     border-radius: 50%
     margin: 10% auto 20% auto
+
 
     @include bp-medium
       width: 400px
       height: 400px
       background:
+        image: url("/images/backgrounds/business-1-medium.jpg")
+        size: cover
         position: right 0px
 
     @include bp-small

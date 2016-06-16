@@ -2,10 +2,14 @@
   +size(100% auto)
   padding: 75px 0 75px 0
   background:
-    image: linear-gradient(rgba($yellow,.8),rgba($yellow,.8)),url(/images/backgrounds/contact2-1920x1080.jpg)
+    image: linear-gradient(rgba($yellow,.8),rgba($yellow,.8)),url(/images/backgrounds/contact2-large.jpg)
     repeat: no-repeat
     attachment: fixed
     position: top left
+  @include bp-medium
+    background-image: linear-gradient(rgba($yellow,.8),rgba($yellow,.8)),url(/images/backgrounds/contact2-medium.jpg)
+  @include bp-small
+    background-image: linear-gradient(rgba($yellow,.8),rgba($yellow,.8)),url(/images/backgrounds/contact2-small.jpg)
 
   .section-title
     color: black

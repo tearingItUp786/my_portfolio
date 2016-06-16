@@ -25,7 +25,7 @@ $(function() {
             if (target.length) {
                 $('html, body').animate({
                     scrollTop: target.offset().top
-                }, 600);
+                }, 400);
 
                 return false;
             }
@@ -48,7 +48,6 @@ $(document).ready(function() {
         'height': initHeight
     });
 
-
     $(window).resize(function() {
         var currentHeight = $(window).height();
 
@@ -56,13 +55,13 @@ $(document).ready(function() {
         console.log(heightDifferece);
 
         if (heightDifferece > 56) {
-            console.log("Current Height was greater by init height more than navbar")
+            // console.log("Current Height was greater by init height more than navbar")
             $('#home').css({
                 'height': currentHeight + 56
             });
             initHeight = currentHeight;
         } else if (heightDifferece < -56) {
-            console.log("Current Height was less by init height more than navbar")
+            // console.log("Current Height was less by init height more than navbar")
             $('#home').css({
                 'height': currentHeight + 56
             });
@@ -139,7 +138,7 @@ var projects = [{
     'attributes': {
         'name': 'Portfolio Website - Makeup Artist',
         'date': 'May 5, 2016 - May 28, 2016',
-        'image': '/images/project_images/originals/makeupbyravia.jpg',
+        'image': '/images/project_images/thumbnails/makeupbyravia-small.jpg',
         'image_caption': 'Makeupbyravia: A surrey based makeup artist.',
         'description': "A freelance front-end web project that's purpose was to highlight the work of a local makeup artist. My role was to design the logo and the website in its entirety.",
         'technology_stack': ['HTML', 'SASS', 'Grunt', 'Git', 'Jekyll', 'Illustrator', 'Photoshop', 'JavaScript/jQuery'],
@@ -150,7 +149,7 @@ var projects = [{
     'attributes': {
         'name': 'Neighbordhood Map V2.0',
         'date': 'April 20, 2016 - June 2, 2016',
-        'image': '/images/project_images/originals/map.jpg',
+        'image': '/images/project_images/thumbnails/map-small.jpg',
         'image_caption': 'HoodMap: A map built with the Yelp API and Google Maps',
         'technology_stack': ['HTML', 'SASS', 'Grunt', 'Git', 'Knockoust JS', 'Illustrator', 'Yelp API', 'Google Maps', 'JavaScript/jQuery'],
         'description': "This was one of the projects in Udacity's Front-End Web Developer Nanodegree. The purposes of this project were to gain experience using the MVC pattern of development, a JavaScript Framework (Knockout.js), and third-party APIS.",
@@ -161,7 +160,7 @@ var projects = [{
     'attributes': {
         'name': 'Udacity Resume',
         'date': 'February 1, 2016 - February 20, 2016',
-        'image': '/images/project_images/originals/resume.jpg',
+        'image': '/images/project_images/thumbnails/resume-small.jpg',
         'image_caption': 'Resume: Built dynamically with JavaScript',
         'description': "This was another project in Udacity's Front-End Web Developer Nanodegree. The purpose of this project was to practice basic JavaScript skills such as loops, functions and DOM manipulation.",
         'technology_stack': ['HTML', 'CSS', 'Git', 'Google Maps', 'JavaScript/jQuery'],
@@ -172,7 +171,7 @@ var projects = [{
     'attributes': {
         'name': 'Blog Version 1.0',
         'date': 'December 2014 - January 2015',
-        'image': '/images/project_images/originals/blog1.jpg',
+        'image': '/images/project_images/thumbnails/blog1-small.jpg',
         'image_caption': 'My first attempt at building a blog using PHP and MySQL',
         'description': "This was my first ever web project. It is continually being updated so this section is subject to change. I created the content for this blog, used Git for version control and to manage my testing/production hosts, and performed several configurations to my server.",
         'technology_stack': ['HTML', 'CSS', 'Git', 'MySQL', 'Bootstrap', 'Photoshop', 'JavaScript/jQuery'],
@@ -183,7 +182,7 @@ var projects = [{
     'attributes': {
         'name': '25toLife',
         'date': 'September 2015 - October 2015',
-        'image': '/images/project_images/originals/twentyfivetolife.jpg',
+        'image': '/images/project_images/thumbnails/twentyfivetolife-small.jpg',
         'image_caption': 'Twentyfivetolife: A website built for BUS 361',
         'description': "First paid front end web development project. Utilized the bootstrap framework to create the layout. This project's purpose was to replace the outdated style with a more modern look within a constricted timeframe. The project had to be live within two weeks of development.",
         'technology_stack': ['HTML', 'CSS', 'Git', 'Bootstrap', 'JavaScript/jQuery'],
@@ -194,7 +193,7 @@ var projects = [{
     'attributes': {
         'name': 'Jasmine - Test Driven Development',
         'date': 'June 1, 2016 - June 8, 2016',
-        'image': '/images/project_images/originals/jasmine.jpg',
+        'image': '/images/project_images/thumbnails/jasmine-small.jpg',
         'image_caption': 'Jasmine Project: Test driven development intro',
         'description': "This was a project in Udacity's Front-End Web Developer Nanodegree. The purposes of this project were to gain experience using a testing framework and to introduce students to test driven development in the JavaScript language.",
         'technology_stack': ['HTML', 'CSS', 'Git', 'Jasmine', 'JavaScript/jQuery'],

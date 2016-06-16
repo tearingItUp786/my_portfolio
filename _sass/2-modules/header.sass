@@ -3,12 +3,15 @@
   position: relative
   overflow: hidden
   background:
-    image: linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),url(/images/backgrounds/shutterstock_281792450-1920x1080.jpg)
+    image: linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),url(/images/backgrounds/shutterstock_281792450-large.jpg)
     repeat: no-repeat
     position: center
     size: cover
     attachment: fixed
-
+  @include bp-medium
+    background-image: linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),url(/images/backgrounds/shutterstock_281792450-medium.jpg)
+  @include bp-small
+    background-image: linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),url(/images/backgrounds/shutterstock_281792450-small.jpg)
   .test
     +size(100% 100%)
     position: relative

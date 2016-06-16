@@ -4,11 +4,15 @@
   box-sizing: border-box
   padding: 75px 0 75px 0
   background:
-    image: linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.4)),url(/images/backgrounds/gallery_try_1-1920x1080.jpg)
+    image: linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.4)),url(/images/backgrounds/gallery_try_1-large.jpg)
     repeat: no-repeat
     position: center
     size: cover
     attachment: fixed
+  @include bp-medium
+    background-image: linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.4)),url(/images/backgrounds/gallery_try_1-medium.jpg)
+  @include bp-small
+    background-image: linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.4)),url(/images/backgrounds/gallery_try_1-small.jpg)
 
   .section-title
     color: black
@@ -27,7 +31,7 @@
         +size(90% 100%)
         margin: auto
         border: 1px solid #fff
-        transition: all 0.5s ease
+        transition: all 1s ease
         cursor: pointer
         opacity: 0
         transform: translateX(-20px)
@@ -35,6 +39,6 @@
         &.is-showing
           opacity: 1
           transform: translateX(0px)
-
+          transition: all 0.5s ease
         &:hover
           transform: scale(1.1, 1.1)

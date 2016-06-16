@@ -895,11 +895,17 @@ html, body {
   width: 100%;
   position: relative;
   overflow: hidden;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/images/backgrounds/shutterstock_281792450-1920x1080.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/images/backgrounds/shutterstock_281792450-large.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-attachment: fixed; }
+  @media only screen and (max-width: 50em) {
+    .header {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/images/backgrounds/shutterstock_281792450-medium.jpg); } }
+  @media only screen and (max-width: 35em) {
+    .header {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/images/backgrounds/shutterstock_281792450-small.jpg); } }
   .header .test {
     height: 100%;
     width: 100%;
@@ -957,11 +963,17 @@ html, body {
   max-width: 100%;
   box-sizing: border-box;
   padding: 75px 0 75px 0;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/images/backgrounds/coding_blur-1920x1080.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/images/backgrounds/coding_blur-large.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-attachment: fixed; }
+  @media only screen and (max-width: 50em) {
+    .about {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/images/backgrounds/coding_blur-medium.jpg); } }
+  @media only screen and (max-width: 35em) {
+    .about {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/images/backgrounds/coding_blur-small.jpg); } }
   .about .section-title, .about .header .test .name-holder .name, .header .test .name-holder .about .name {
     color: white;
     width: 100%;
@@ -993,9 +1005,9 @@ html, body {
   .about .periscope {
     height: 500px;
     width: 500px;
-    background-image: url("/images/backgrounds/business-1-try.jpg");
+    background-image: url("/images/backgrounds/business-1-medium.jpg");
     background-size: contain;
-    background-position: center 0px;
+    background-position: left 0px;
     background-attachment: fixed;
     border-radius: 50%;
     margin: 10% auto 20% auto; }
@@ -1003,6 +1015,8 @@ html, body {
       .about .periscope {
         width: 400px;
         height: 400px;
+        background-image: url("/images/backgrounds/business-1-medium.jpg");
+        background-size: cover;
         background-position: right 0px; } }
     @media only screen and (max-width: 35em) {
       .about .periscope {
@@ -1014,11 +1028,17 @@ html, body {
   max-width: 100%;
   box-sizing: border-box;
   padding: 75px 0 75px 0;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/backgrounds/gallery_try_1-1920x1080.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/backgrounds/gallery_try_1-large.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-attachment: fixed; }
+  @media only screen and (max-width: 50em) {
+    .portfolio {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/backgrounds/gallery_try_1-medium.jpg); } }
+  @media only screen and (max-width: 35em) {
+    .portfolio {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/backgrounds/gallery_try_1-small.jpg); } }
   .portfolio .section-title, .portfolio .header .test .name-holder .name, .header .test .name-holder .portfolio .name {
     color: black;
     width: 100%;
@@ -1034,13 +1054,14 @@ html, body {
       width: 90%;
       margin: auto;
       border: 1px solid #fff;
-      transition: all 0.5s ease;
+      transition: all 1s ease;
       cursor: pointer;
       opacity: 0;
       transform: translateX(-20px); }
       .portfolio .grid_wrapper .thumbnail img.is-showing {
         opacity: 1;
-        transform: translateX(0px); }
+        transform: translateX(0px);
+        transition: all 0.5s ease; }
       .portfolio .grid_wrapper .thumbnail img:hover {
         transform: scale(1.1, 1.1); }
 
@@ -1048,10 +1069,16 @@ html, body {
   height: auto;
   width: 100%;
   padding: 75px 0 75px 0;
-  background-image: linear-gradient(rgba(245, 174, 0, 0.8), rgba(245, 174, 0, 0.8)), url(/images/backgrounds/contact2-1920x1080.jpg);
+  background-image: linear-gradient(rgba(245, 174, 0, 0.8), rgba(245, 174, 0, 0.8)), url(/images/backgrounds/contact2-large.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: top left; }
+  @media only screen and (max-width: 50em) {
+    .contact {
+      background-image: linear-gradient(rgba(245, 174, 0, 0.8), rgba(245, 174, 0, 0.8)), url(/images/backgrounds/contact2-medium.jpg); } }
+  @media only screen and (max-width: 35em) {
+    .contact {
+      background-image: linear-gradient(rgba(245, 174, 0, 0.8), rgba(245, 174, 0, 0.8)), url(/images/backgrounds/contact2-small.jpg); } }
   .contact .section-title, .contact .header .test .name-holder .name, .header .test .name-holder .contact .name {
     color: black;
     width: 100%;
@@ -1188,6 +1215,7 @@ html, body {
     flex-wrap: wrap;
     font-family: 'Raleway', sans-serif;
     width: 800px;
+    max-width: 99%;
     background: rgba(13, 13, 13, 0.8);
     color: #ccc;
     border: solid 1px #f5ae00; }
