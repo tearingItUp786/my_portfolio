@@ -106,7 +106,7 @@ $(document).ready(function() {
 
         if (windowScroll >= $('.portfolio').offset().top - 300) {
             window.requestAnimationFrame(function() {
-                if (false == $('.portfolio .thumbnail img').hasClass('is-showing')) {
+                if (false === $('.portfolio .thumbnail img').hasClass('is-showing')) {
                     $('.portfolio .thumbnail img').each(function(i) {
                         setTimeout(function() {
                             $('.portfolio .thumbnail img').eq(i).addClass('is-showing');
@@ -208,7 +208,7 @@ function openDialog(param) {
             if (projects[key].id === param.id) {
                 var project = projects[key].attributes;
 
-                var list_of_technologies = ""
+                var list_of_technologies = "";
                 for (var technology in project.technology_stack) {
                     if (project.technology_stack.hasOwnProperty(technology)) {
                         list_of_technologies += ('<li>' + project.technology_stack[technology] + '</li>');

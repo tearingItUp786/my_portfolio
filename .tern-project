@@ -1,7 +1,5 @@
 {
   "ecmaVersion": 6,
-  "libs": [
-    "browser",
-    "jquery"
-  ]
+  "libs": ["browser"],
+  "plugins": {}
 }

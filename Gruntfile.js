@@ -74,7 +74,7 @@ module.exports = function(grunt) {
                     // dest: 'images/backgrounds/'
                     expand: true,
                     src: ['**.{JPG,gif,png,jpg}'],
-                    cwd: 'images//originals/',
+                    cwd: 'images//originals/overlay/',
                     dest: 'images/backgrounds/'
                 }]
             }

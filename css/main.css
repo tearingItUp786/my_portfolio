@@ -867,7 +867,7 @@ html, body {
           border-left: 3px solid #f5ae00;
           background-color: black; }
         .navbar .nav .nav-item a {
-          padding: 20px 50px 20px 50px; }
+          padding: 20px 100px; }
   .c-hamburger {
     position: fixed;
     top: 1px;
@@ -888,24 +888,24 @@ html, body {
     overflow-x: hidden;
     max-height: 300px; }
     .navbar .nav .nav-item a {
-      padding: 20px; } }
+      padding: 20px 45px; } }
 
 .header {
   height: 100%;
   width: 100%;
   position: relative;
   overflow: hidden;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/images/backgrounds/shutterstock_281792450-large.jpg);
+  background-image: url(/images/backgrounds/shutterstock_overlay-large.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-attachment: fixed; }
   @media only screen and (max-width: 50em) {
     .header {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/images/backgrounds/shutterstock_281792450-medium.jpg); } }
+      background-image: url(/images/backgrounds/shutterstock_overlay-medium.jpg); } }
   @media only screen and (max-width: 35em) {
     .header {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/images/backgrounds/shutterstock_281792450-small.jpg); } }
+      background-image: url(/images/backgrounds/shutterstock_overlay-small.jpg); } }
   .header .test {
     height: 100%;
     width: 100%;
@@ -963,17 +963,17 @@ html, body {
   max-width: 100%;
   box-sizing: border-box;
   padding: 75px 0 75px 0;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/images/backgrounds/coding_blur-large.jpg);
+  background-image: url(/images/backgrounds/coding_overlay-large.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-attachment: fixed; }
   @media only screen and (max-width: 50em) {
     .about {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/images/backgrounds/coding_blur-medium.jpg); } }
+      background-image: url(/images/backgrounds/coding_overlay-medium.jpg); } }
   @media only screen and (max-width: 35em) {
     .about {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/images/backgrounds/coding_blur-small.jpg); } }
+      background-image: url(/images/backgrounds/coding_overlay-small.jpg); } }
   .about .section-title, .about .header .test .name-holder .name, .header .test .name-holder .about .name {
     color: white;
     width: 100%;
@@ -1028,17 +1028,17 @@ html, body {
   max-width: 100%;
   box-sizing: border-box;
   padding: 75px 0 75px 0;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/backgrounds/gallery_try_1-large.jpg);
+  background-image: url(/images/backgrounds/gallery_overlay-large.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-attachment: fixed; }
   @media only screen and (max-width: 50em) {
     .portfolio {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/backgrounds/gallery_try_1-medium.jpg); } }
+      background-image: url(/images/backgrounds/gallery_overlay-medium.jpg); } }
   @media only screen and (max-width: 35em) {
     .portfolio {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/backgrounds/gallery_try_1-small.jpg); } }
+      background-image: url(/images/backgrounds/gallery_overlay-small.jpg); } }
   .portfolio .section-title, .portfolio .header .test .name-holder .name, .header .test .name-holder .portfolio .name {
     color: black;
     width: 100%;
@@ -1069,16 +1069,16 @@ html, body {
   height: auto;
   width: 100%;
   padding: 75px 0 75px 0;
-  background-image: linear-gradient(rgba(245, 174, 0, 0.8), rgba(245, 174, 0, 0.8)), url(/images/backgrounds/contact2-large.jpg);
+  background-image: url(/images/backgrounds/contact_overlay-large.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: top left; }
   @media only screen and (max-width: 50em) {
     .contact {
-      background-image: linear-gradient(rgba(245, 174, 0, 0.8), rgba(245, 174, 0, 0.8)), url(/images/backgrounds/contact2-medium.jpg); } }
+      background-image: url(/images/backgrounds/contact_overlay-medium.jpg); } }
   @media only screen and (max-width: 35em) {
     .contact {
-      background-image: linear-gradient(rgba(245, 174, 0, 0.8), rgba(245, 174, 0, 0.8)), url(/images/backgrounds/contact2-small.jpg); } }
+      background-image: url(/images/backgrounds/contact_overlay-small.jpg); } }
   .contact .section-title, .contact .header .test .name-holder .name, .header .test .name-holder .contact .name {
     color: black;
     width: 100%;
