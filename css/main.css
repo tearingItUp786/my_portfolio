@@ -804,9 +804,9 @@ html, body {
   .navbar {
     opacity: 0;
     height: auto;
-    width: 50%;
-    min-width: 200px;
-    transform: translate(-100%, 0); }
+    width: 300px;
+    height: auto;
+    transform: translate(-1000px, 0); }
     .navbar.open {
       opacity: 1;
       transform: translate(0, 0);
@@ -883,29 +883,33 @@ html, body {
     height: 80px; }
     .c-hamburger span {
       top: 39px; }
-  .navbar {
-    overflow-y: auto;
-    overflow-x: hidden;
-    max-height: 300px; }
-    .navbar .nav .nav-item a {
-      padding: 20px 45px; } }
+  .navbar .nav .nav-item a {
+    padding: 20px 45px; } }
 
 .header {
   height: 100%;
   width: 100%;
   position: relative;
   overflow: hidden;
-  background-image: url(/images/backgrounds/shutterstock_overlay-large.jpg);
+  background-image: url(/images/backgrounds/shutterstock_281792450-large.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-attachment: fixed; }
   @media only screen and (max-width: 50em) {
     .header {
-      background-image: url(/images/backgrounds/shutterstock_overlay-medium.jpg); } }
+      background-image: url(/images/backgrounds/shutterstock_281792450-medium.jpg); } }
   @media only screen and (max-width: 35em) {
     .header {
-      background-image: url(/images/backgrounds/shutterstock_overlay-small.jpg); } }
+      background-image: url(/images/backgrounds/shutterstock_281792450-small.jpg); } }
+  .header .section-overlay {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.6); }
   .header .test {
     height: 100%;
     width: 100%;
@@ -959,6 +963,7 @@ html, body {
             font-size: 1em; } }
 
 .about {
+  position: relative;
   min-height: 100%;
   max-width: 100%;
   box-sizing: border-box;
@@ -1008,7 +1013,6 @@ html, body {
     background-image: url("/images/backgrounds/business-1-medium.jpg");
     background-size: contain;
     background-position: left 0px;
-    background-attachment: fixed;
     border-radius: 50%;
     margin: 10% auto 20% auto; }
     @media only screen and (max-width: 50em) {

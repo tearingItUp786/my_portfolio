@@ -3,15 +3,25 @@
   position: relative
   overflow: hidden
   background:
-    image: url(/images/backgrounds/shutterstock_overlay-large.jpg)
+    image: url(/images/backgrounds/shutterstock_281792450-large.jpg)
     repeat: no-repeat
     position: center
     size: cover
     attachment: fixed
   @include bp-medium
-    background-image:  url(/images/backgrounds/shutterstock_overlay-medium.jpg)
+    background-image: url(/images/backgrounds/shutterstock_281792450-medium.jpg)
   @include bp-small
-    background-image:  url(/images/backgrounds/shutterstock_overlay-small.jpg)
+    background-image: url(/images/backgrounds/shutterstock_281792450-small.jpg)
+
+  .section-overlay
+    +size(100% 100%)
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    background:
+      color: rgba(0,0,0,0.6)
+
   .test
     +size(100% 100%)
     position: relative
