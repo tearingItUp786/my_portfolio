@@ -71,9 +71,9 @@
 @include bp-medium
   .navbar
     opacity: 0
-    height: auto
     width: 300px
     height: auto
+    min-height: 300px
     transform: translate(-1000px, 0)
 
 
@@ -94,10 +94,12 @@
       margin: 0
       padding: 0
       list-style-type: none
+      min-width: 300px
+      min-height: 300px
 
       .nav-item
         width: 100%
-        padding: 10% 0 10% 0
+        padding: 25px 0 25px 0
         border-top: 1px solid darken($gray, 20%)
 
         &.active

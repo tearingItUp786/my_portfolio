@@ -1,5 +1,6 @@
 $(document).ready(function() {
     "use strict";
+
     var toggle = document.querySelector('.c-hamburger'),
         navbar = document.querySelector('.navbar'),
         navbarItems = document.querySelectorAll(".nav-item"),
@@ -8,8 +9,6 @@ $(document).ready(function() {
         windowWidth = window.innerWidth,
         ticking = false,
         showing = false;
-
-
 
     toggle.addEventListener("click", function(e) {
         e.preventDefault();
@@ -22,6 +21,32 @@ $(document).ready(function() {
             navbar.classList.add("open");
         }
     });
+
+    $('.nav-item a').click(function() {
+
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+
+            if ($('.c-hamburger').hasClass('is-active')) {
+                $('.c-hamburger').removeClass('is-active');
+                $('.navbar').removeClass('open');
+            }
+
+            if (target.length) {
+                $('html, body').animate({
+                    scrollTop: target.offset().top
+                }, 400);
+
+                return false;
+            }
+        }
+
+    });
+
+
+
+
 
     /**
      * Callback for our scroll event - just
@@ -73,7 +98,7 @@ $(document).ready(function() {
             navbarItems[1].children[0].classList.add('active');
         }
         if (showing === false && lastScrollY >= $('.portfolio').offset().top - 300) {
-          console.log("showing was false");
+            console.log("showing was false");
             $('.portfolio .thumbnail img').each(function(i) {
                 setTimeout(function() {
                     $('.portfolio .thumbnail img').eq(i).addClass('is-showing');
@@ -107,6 +132,33 @@ $(document).ready(function() {
 
     // only listen for scroll events
     window.addEventListener('scroll', onScroll, false);
+
+    var initHeight = $(window).height() + 56;
+
+    $('#home').css({
+        'height': initHeight
+    });
+
+    $(window).resize(function() {
+        var currentHeight = $(window).height();
+
+        var heightDifferece = currentHeight - initHeight;
+        console.log(heightDifferece);
+
+        if (heightDifferece > 56) {
+            // console.log("Current Height was greater by init height more than navbar")
+            $('#home').css({
+                'height': currentHeight + 56
+            });
+            initHeight = currentHeight;
+        } else if (heightDifferece < -56) {
+            // console.log("Current Height was less by init height more than navbar")
+            $('#home').css({
+                'height': currentHeight + 56
+            });
+            initHeight = currentHeight;
+        }
+    });
 });
 
 var projects = [{

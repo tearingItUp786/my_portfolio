@@ -803,9 +803,9 @@ html, body {
 @media only screen and (max-width: 50em) {
   .navbar {
     opacity: 0;
-    height: auto;
     width: 300px;
     height: auto;
+    min-height: 300px;
     transform: translate(-1000px, 0); }
     .navbar.open {
       opacity: 1;
@@ -851,10 +851,12 @@ html, body {
       -ms-flex-align: center;
       margin: 0;
       padding: 0;
-      list-style-type: none; }
+      list-style-type: none;
+      min-width: 300px;
+      min-height: 300px; }
       .navbar .nav .nav-item {
         width: 100%;
-        padding: 10% 0 10% 0;
+        padding: 25px 0 25px 0;
         border-top: 1px solid #6d6d6d; }
         .navbar .nav .nav-item.active {
           border-left: 3px solid #f5ae00;
@@ -1076,7 +1078,8 @@ html, body {
   background-image: url(/images/backgrounds/contact_overlay-large.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position: top left; }
+  background-position: top left;
+  background-size: cover; }
   @media only screen and (max-width: 50em) {
     .contact {
       background-image: url(/images/backgrounds/contact_overlay-medium.jpg); } }
