@@ -25,7 +25,12 @@ module.exports = function(grunt) {
             jekyll: {
                 files: ['_layouts/*.html', '_includes/*.html', 'css/*', 'js/*.js', 'index.html', ],
                 tasks: ['jekyll']
-            }
+            },
+
+						uglify: {
+							files: ['js/app_optimized.js'],
+							tasks: ['min']
+						}
         },
 
         browserSync: {
@@ -65,7 +70,7 @@ module.exports = function(grunt) {
                         width: '640',
                         height: '480'
                     }],
-                    quality: 90
+                    quality: 75
                 },
                 files: [{
                     // expand: true,
@@ -115,7 +120,7 @@ module.exports = function(grunt) {
 
     // Custom tasks
     grunt.registerTask('build', ['sass', 'jekyll']);
-    grunt.registerTask('default', ['build', 'browserSync', 'watch']);
-    grunt.registerTask('resize', ['responsive_images']);
     grunt.registerTask('min', ['cssmin', 'uglify']);
+    grunt.registerTask('default', ['min', 'build', 'browserSync', 'watch']);
+    grunt.registerTask('resize', ['responsive_images']);
 };
