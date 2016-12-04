@@ -59,7 +59,7 @@
             // Switch on animations.
             var name = document.querySelector(".name-holder");
             var first = name.getBoundingClientRect();
-            name.style.transform = 'translate(-' + lastScrollY + 'px,' + lastScrollY + 'px)';
+            name.style.transform = 'translate(-' + (2 * lastScrollY) + 'px,' + lastScrollY + 'px)';
             var last = name.getBoundingClientRect();
 
             var invert = first.top - last.top;
@@ -68,25 +68,4 @@
         ticking = false;
     }
     window.addEventListener('scroll', onScroll, false);
-    var initHeight = window.innerHeight + 56;
-		console.log(initHeight);
-    document.querySelector("#home").style.height = initHeight + 'px';
-    document.querySelector(".section-overlay").style.height = initHeight + 'px';
-    
-		window.addEventListener('resize', function() {
-        var currentHeight = this.outerHeight;
-        var heightDifferece = currentHeight - initHeight;
-        console.log(heightDifferece);
-
-        if (heightDifferece > 56) {
-            console.log(currentHeight);
-            document.querySelector("#home").style.height = currentHeight + 56;
-            initHeight = currentHeight;
-        } else if (heightDifferece < -56) {
-            console.log(currentHeight + "In else if");
-            document.querySelector("#home").style.height = currentHeight + 56;
-            initHeight = currentHeight;
-        }
-    });
-
 })();

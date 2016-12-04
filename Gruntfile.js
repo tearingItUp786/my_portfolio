@@ -48,7 +48,8 @@ module.exports = function(grunt) {
                 server: {
                     baseDir: '_site'
                 },
-                port: 3000
+                port: 5000,
+								tunnel: true
             }
         },
         responsive_images: {
